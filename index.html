@@ -2,33 +2,102 @@
 <html lang="pt-br">
   <head>
     <title>Job - Tryber</title>
-    <link rel="stylesheet" type="text/css" href="styles/style.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100&display=swap" rel="stylesheet">
     <meta charset="utf-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/style.css" />
+
   </head>
-  <body>
-        <h1>Hello World!</h1>
 
-        <img id="fotoPefil" src="img/job.jpeg" alt="homem_bonito" width="150" >
+  <body class="borda_tool styles">
 
-      <p>
-        <strong>My name is Job, Lucas Job. I'm a young and handsome guy, born and raised in the countryside of Paraná, Brazil.</strong> Bem, por enquanto é só isso que eu consigo escrever sobre <a href="https://www.linkedin.com/in/lucas-job-viana-836588261/" target="_blank">mim</a> em inglês sem ter que usar a internet, então irei manter no português mesmo.
-      </p> 
-      
-      <p>
-        Ha algum tempo eu concluí um curso técnico em eletroeletrônica, pelo senai-sp, logo após ingressei e me graduei como bacharel em ciências da computação, pelo centro universitário de rio preto. Apos isso acabei trabalhando em setores não relacionados à área, e, depois de algum tempo, estou voltando à área de tecnologia, como uma pessoa <strong>estudante</strong>.
-      </p>
-      
-      <p>
-        Para isso decidi contar com a ajuda da <a href="https://www.betrybe.com/" target="_blank">trybe</a> para me ajudar a trilhar esse caminho, através do seu curso Formação em Desenvolvimento Web.
-      </p>
+        
+    <header id="cabecalho">
+        <section id="apresentation" class="header">
+            <h1 id="titulo">Hello World! I'm Lucas Job Viana</h1>
+        </section>
+        <img id="minha_foto" src="img/job.png" alt="Foto do altor" />
+    </header>
 
-      <p>
-        Com relação à programação, eu acabei trabalhando durante a minha formação com uma série de linguagens, dentre elas as principais são c, java, c## e, é claro, o indispensável sql.  
-      </p>
+
+
+    <section id="menu_navigator" class="menu_navigator">
+        <a href="">Principal</a>
+        <a href="">Sobre</a>
+        <a href="">Contato</a>
+        <a href="">Outro</a>
+        <a href="">Competencias</a>    
+    </section>
+
+    <main class="main" style="background-image: url(img/background.jpg);">        
+        <ol id="licoes_aprendidas"> 
+            <li>Trabalhando com o Slack</li> 
+            <li>Trabalhando com o zoom</li> 
+            <li>Unix e Bash - Parte 01</li> 
+            <li>Unix e Bash - Parte 02</li> 
+            <li>Git - Oque é e para que serve</li> 
+            <li>Git & Github - Entendendo os comandos</li> 
+            <li>Html & Css - Estruturas de página</li> 
+            <li>Html & Css - Primeiros passos em css</li> 
+            <li>Html & Css - Seletores e posicionamento</li> 
+            <li>Html Semântico</li> 
+        </ol>
+
+        <ul id="licoes_a_aprender">
+            <li>Javascript</li> 
+            <li>Jquery</li> 
+            <li>Java</li> 
+            <li>Bootstrap</li> 
+            <li>SQL</li> 
+            <li>Estruturas de dados</li> 
+            <li>Algoritmos de ordenamento</li> 
+            <li>SEO</li> 
+            <li>Testes automatizados</li> 
+            <li>C#</li> 
+        </ul>
+
+        <section class="lado-a-lado">
+            <article class="lado-esquerdo">
+                <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ut vehicula risus. Morbi ut lacus sed arcu vestibulum placerat nec vitae diam. Sed justo nisi, iaculis a venenatis quis, fringilla id est. Pellentesque bibendum laoreet magna id congue. Cras mattis non nibh ac consectetur. Aliquam varius egestas gravida. Curabitur laoreet eleifend arcu. Nulla viverra lectus volutpat finibus ultricies. Nam aliquam justo nec ex tincidunt pharetra. Ut biam.
+                </p>    
+            </article>
+    
+            <aside class="lado-direito">
+                Sobre Mim: Olá, meu nome é lucas job viana, sou formado em ciencias da computação e atualmente estou fazendo um curso especialista em desenvolvimento web na trybe.
+            </aside>
+
+        </section>
+
+
+        <div id="hiden_table">
+            <button>Dados Gerais:</button>
+            <table>
+                <tr><th>Nome:</th><td>Lucas Job Viana</td></tr>
+                <tr><th>Idade:</th><td>31</td></tr>
+                <tr><th>Signo:</th><td>Cancer</td></tr>
+                <tr><th>Apelido:</th><td>Job</td></tr>
+            </table>
+        </div>
+    </main>
+
+    
+    
+    <footer id="rodape">
+        <section class="d">
+            FOOTER
+        </section>
+        <section id="contato" >
+            <a href="mailto:lucasjobvianna@gmail.com?Subject=%5BContato%20pelo%20Site%5D%20-%20...&Body=Ol%E1%20Lucas%20Job%20Viana%2C%20gostei%20muito%20do%20seu%20portf%F3lio%20e%20fiquei%20interessado%20..."><img src="img/email.png" alt="Link para enviar email ao autor" style="width: 30px;"></a>
+            <a target="_blank" href="https://www.linkedin.com/in/lucas-job-viana-836588261/"><img src="img/linkdin.png" alt="Link para o linkdin do altor" style="width: 30px;"></a>
+            <a target="_blank" href="https://github.com/lucasjobviana"><img src="img/github.png" alt="Link para github do autor" style="width: 30px;"></a>
+        </section>
+    </footer>
+
+
+    
+
 
   </body>
 </html
-
