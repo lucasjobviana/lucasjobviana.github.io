@@ -2,24 +2,9 @@ body {
   background-color: rgb(253, 251, 251);
 }
 
-#cabecalho {
-  position: fixed;
-  top: 0;
-}
-
 body > * {
-  color: blue;
-  border: 2px;
-  padding: 2px;
-  margin: 2px;
   font-family: Roboto Mono, monospace;
-  line-height: 90%;
-  font-size: 90%;
-}
-
-.lado-a-lado {
-  display: flex;
-  flex-direction: row;
+  font-size: 20%;
 }
 
 .lado-direito {
@@ -28,12 +13,10 @@ body > * {
 
 .borda_tool > * {
   border: 2px solid black;
+  
 }
 
-header > img {
-  width: 20px;
-  border-radius: 50%;
-}
+
 
 .main {
   height: 100%;
@@ -70,12 +53,19 @@ header {
   text-align: center;
 }
 
-footer {
+.header_footer {
   position: relative;
-  width: auto;
-  background-color: blueviolet;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
 }
 
-#contato {
-  display: block;
+#contact > a > img {
+  width:20px;
+}
+#apresentation > section > img {
+  width: 20px;
+  border-radius: 50%;
 }

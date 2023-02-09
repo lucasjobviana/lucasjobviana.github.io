@@ -1,103 +1,38 @@
 <!DOCTYPE html>
 <html lang="pt-br">
   <head>
-    <title>Job - Tryber</title>
     <meta charset="utf-8">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles/style.css" />
+    <link rel="stylesheet" href="estilo.css" />
+    <title>Paleta de Cores</title>
+    <script src="script.js"></script>
 
   </head>
 
-  <body class="borda_tool styles">
+  <body>
 
-        
-    <header id="cabecalho">
-        <section id="apresentation" class="header">
-            <h1 id="titulo">Hello World! I'm Lucas Job Viana</h1>
-        </section>
-        <img id="minha_foto" src="img/job.png" alt="Foto do altor" />
-    </header>
-
-
-
-    <section id="menu_navigator" class="menu_navigator">
-        <a href="">Principal</a>
-        <a href="">Sobre</a>
-        <a href="">Contato</a>
-        <a href="">Outro</a>
-        <a href="">Competencias</a>    
+    <h1 id="title">Paleta de Cores</h1>
+    
+    <section id="color-palette" class="color-palette">
+        <div style="background-color: #000000;" class="color clickable selected"></div>
+        <div class="color clickable"></div>
+        <div class="color clickable"></div>
+        <div class="color clickable"></div>
     </section>
 
-    <main class="main" style="background-image: url(img/background.jpg);">        
-        <ol id="licoes_aprendidas"> 
-            <li>Trabalhando com o Slack</li> 
-            <li>Trabalhando com o zoom</li> 
-            <li>Unix e Bash - Parte 01</li> 
-            <li>Unix e Bash - Parte 02</li> 
-            <li>Git - Oque é e para que serve</li> 
-            <li>Git & Github - Entendendo os comandos</li> 
-            <li>Html & Css - Estruturas de página</li> 
-            <li>Html & Css - Primeiros passos em css</li> 
-            <li>Html & Css - Seletores e posicionamento</li> 
-            <li>Html Semântico</li> 
-        </ol>
+    <section class="funcionalidades">
+      <button id="button-random-color" class="clickable" >Cores aleatórias</button>
+      <button id="button-pattern-color" class="clickable" >Cores Padrão</button>
+      <button id="clear-board" class="clickable" >Limpar</button>
+      <button id="clean-board" class="clickable" >Borracha</button>
+      <button id="save" class="clickable" >Save</button>
+      <label for="board-size">Pixel - Line:
+        <input type="number" id="board-size" min="1" title="Insira um numero maior que 0" />
+      </label>
+      <button id="generate-board" class="clickable">VQV</button>      
+    </section>
 
-        <ul id="licoes_a_aprender">
-            <li>Javascript</li> 
-            <li>Jquery</li> 
-            <li>Java</li> 
-            <li>Bootstrap</li> 
-            <li>SQL</li> 
-            <li>Estruturas de dados</li> 
-            <li>Algoritmos de ordenamento</li> 
-            <li>SEO</li> 
-            <li>Testes automatizados</li> 
-            <li>C#</li> 
-        </ul>
-
-        <section class="lado-a-lado">
-            <article class="lado-esquerdo">
-                <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ut vehicula risus. Morbi ut lacus sed arcu vestibulum placerat nec vitae diam. Sed justo nisi, iaculis a venenatis quis, fringilla id est. Pellentesque bibendum laoreet magna id congue. Cras mattis non nibh ac consectetur. Aliquam varius egestas gravida. Curabitur laoreet eleifend arcu. Nulla viverra lectus volutpat finibus ultricies. Nam aliquam justo nec ex tincidunt pharetra. Ut biam.
-                </p>    
-            </article>
-    
-            <aside class="lado-direito">
-                Sobre Mim: Olá, meu nome é lucas job viana, sou formado em ciencias da computação e atualmente estou fazendo um curso especialista em desenvolvimento web na trybe.
-            </aside>
-
-        </section>
-
-
-        <div id="hiden_table">
-            <button>Dados Gerais:</button>
-            <table>
-                <tr><th>Nome:</th><td>Lucas Job Viana</td></tr>
-                <tr><th>Idade:</th><td>31</td></tr>
-                <tr><th>Signo:</th><td>Cancer</td></tr>
-                <tr><th>Apelido:</th><td>Job</td></tr>
-            </table>
-        </div>
+    <main>
+      <section id="pixel-board" class="color-paint"></section>
     </main>
-
-    
-    
-    <footer id="rodape">
-        <section class="d">
-            FOOTER
-        </section>
-        <section id="contato" >
-            <a href="mailto:lucasjobvianna@gmail.com?Subject=%5BContato%20pelo%20Site%5D%20-%20...&Body=Ol%E1%20Lucas%20Job%20Viana%2C%20gostei%20muito%20do%20seu%20portf%F3lio%20e%20fiquei%20interessado%20..."><img src="img/email.png" alt="Link para enviar email ao autor" style="width: 30px;"></a>
-            <a target="_blank" href="https://www.linkedin.com/in/lucas-job-viana-836588261/"><img src="img/linkdin.png" alt="Link para o linkdin do altor" style="width: 30px;"></a>
-            <a target="_blank" href="https://github.com/lucasjobviana"><img src="img/github.png" alt="Link para github do autor" style="width: 30px;"></a>
-        </section>
-    </footer>
-
-
-    
-
-
   </body>
 </html
