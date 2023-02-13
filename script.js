@@ -1,3 +1,4 @@
+
 const config = {
     palleteColorSize: '20px',
     pixelSize: '20px',
