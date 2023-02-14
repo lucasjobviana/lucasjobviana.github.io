@@ -1,0 +1,28 @@
+#page-arts-Pixel {
+    display: flex;
+    flex-direction: column;
+}
+#page-arts-Pixel section{
+    display: flex;
+    flex-wrap: wrap;
+}
+#section-color-Palette {
+    flex-direction: row;
+    justify-content: center;
+}
+.tools {
+    justify-content: center;
+}
+.color {
+    width: 40px;
+    height: 40px;
+    margin: 5px;
+    border-radius: 70%;
+    opacity: 0.6;
+}
+.color:hover {
+    opacity: 1;
+}
+h1{
+    text-align: center;
+}

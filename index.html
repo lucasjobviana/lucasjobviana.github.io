@@ -9,11 +9,26 @@
   </head>
 
   <body>
-    <section id="page-asrt-Pixel">
+    <section id="page-arts-Pixel">
       <h1 id="title">Paleta de Cores</h1>
     
       <section id="section-color-Palette" class="color-Palette">
-          <div id="color-Black"></div>
+          <div class="color"></div>
+          <div class="color"></div>
+          <div class="color"></div>
+          <div class="color"></div>
+      </section>
+
+      <section id="section-board-Size">
+        <label for="button-board-Row">Row:
+          <input type="number" id="button-board-Row" min="1" max="30" title="Enter a number between 1 and 30." />
+        </label>
+
+        <label for="button-board-Collum">Collum:
+          <input type="number" id="button-board-Collum" min="1" max="30" title="Enter a number between 1 and 30." />
+        </label>
+
+        <button id="button-generate-Board" class="clickable">Generate</button>  
       </section>
 
       <section class="tools">
@@ -23,19 +38,7 @@
         <button id="button-clear-Board" class="clickable" >Clear</button>
         <button id="button-clean-Pixel" class="clickable" >Rubber</button>
         <button id="button-save-Board" class="clickable" >Save</button>
-        
-        <section id="section-board-Size">
-          <label for="button-board-Row">Row:
-            <input type="number" id="button-board-Row" min="1" max="30" title="Enter a number between 1 and 30." />
-          </label>
 
-          <label for="button-board-Collum">Collum:
-            <input type="number" id="button-board-Collum" min="1" max="30" title="Enter a number between 1 and 30." />
-          </label>
-
-          <button id="button-generate-Board" class="clickable">Generate</button>  
-        </section>
-      
       </section>
 
       <main>
