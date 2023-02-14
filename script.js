@@ -2,35 +2,59 @@
 const config = {
     palleteColorSize: '20px',
     pixelSize: '20px',
-    borderSize: '1px'
+    borderSize: '1px',
+    selectedColor:'cor selecionada'
 }
 
 
-const pixel = {
-    size: config.pixelSize,
-    borderSize: 1,
-    backgroundColor: '#FFFFFF',
-    previousColor: ''
-}
-
-const color = {
-    backgroundColor: null,size: null,
-
-    color(bgColor){
-        this.backgroundColor = bgColor;
-        this.size = config.palleteColorSize; 
-        return this;
+class Pixel {
+    constructor() {
+        this.size = config.pixelSize;
+        this.backgroundColor = config.selectedColor,
+        this.borderSize = config.borderSize,
+        this.previousColor = '#FFFFFF';
     }
 }
-const palette = {
-    color: []
-    
+
+class Color {
+    constructor() {
+        this.backgroundColor = null;
+        this.size = config.paletteSize;
+        this.isSelected = false;
+    }
+
+    select() {
+        this.isSelected = true;
+    }
+    unSelect() {
+        this.isSelected = false;
+    }
 }
 
-const pixelBoard = {
-    boardCollum:null, boardRow:null, pixel, colorSelected:null, colorRubber:null
-
+class Palette {
+    constructor(arrayColor) {
+        this.colors = arrayColor;
+    }
+    add(newColorPalette){
+        this.colors.push(newColorPalette);
+    }
+    rmv(colorPalette) {
+        this.colors.remove(newColorPalette);
+    }
 }
 
-let minhacor = color.color('red');
-console.info(minhacor)
+class PixelBoard {
+    constructor(arrayPixel) {
+        this.boardCollum = config.boardCollum;
+        this.boardRow = config.boardRow;
+        this.pixels = arrayPixel;
+    }
+}
+
+let arrayPixel = [new Pixel(),new Pixel(),new Pixel()];
+let pixelBoard = new PixelBoard(arrayPixel);
+let corPixel1 = pixelBoard.pixels[0].backgroundColor;
+console.log(corPixel1)
+
+
+
