@@ -30,9 +30,8 @@ class Color{ //extends HtmlElement
         this.backgroundColor = (hexaColor) ? hexaColor : config.backgroundColor;
         this.size = config.colorSize;
         this.isSelected = false;
-        this.htmlElement = '_undefined_';
+        this.htmlElement1 = '_undefined_';
     }
-
 
     select() {
         this.isSelected = true;
@@ -46,13 +45,18 @@ class Palette {
 
     constructor(arrayColor) {
         this.colors = arrayColor;
-        
     }
     add(newColorPalette){
         this.colors.push(newColorPalette);
     }
     rmv(colorPalette) {
         this.colors.remove(colorPalette);
+    }
+    selectColor(index) {
+        this.colors.forEach(function(colorItem,index){
+            colorItem.isSelected = false;
+        });
+        this.colors[index].isSelected = true; 
     }
 }
 
@@ -70,21 +74,31 @@ let arrayColor = [new Color('#000000'),new Color('#14ABB0'),new Color('#00FF22')
 let palette = new Palette(arrayColor);
 let colorsElement = document.getElementsByClassName('color');
 
+
+function addHtmlElementToObects() {
+    palette.colors[0].htmlElement1 = colorsElement[0];
+    palette.colors[1].htmlElement1 = colorsElement[1];
+    palette.colors[2].htmlElement1 = colorsElement[2];
+    palette.colors[3].htmlElement1 = colorsElement[3];
+}
+
+
 window.onload = function(){
-
-    palette.colors[0].htmlElement = colorsElement[0];
-    palette.colors[1].htmlElement = colorsElement[1];
-    palette.colors[2].htmlElement = colorsElement[2];
-    palette.colors[3].htmlElement = colorsElement[3]; 
-
-
-    console.info(palette.colors[0].htmlElement)
+ 
+    addHtmlElementToObects();
 
     for (let i = 0; i < palette.colors.length ; i+=1) {
-        palette.colors[i].htmlElement.style.backgroundColor = arrayColor[i].backgroundColor;
+        palette.colors[i].htmlElement1.style.backgroundColor = arrayColor[i].backgroundColor;
         console.info(i)
     }
 
+    palette.colors.forEach(function(colorItem,index){
+         
+        colorItem.htmlElement1.addEventListener('click',function(event){//alert(event.target.style.backgroundColor);
+            palette.selectColor(index);  
+            console.log(palette)
+        });
+    });
 }
 
 
