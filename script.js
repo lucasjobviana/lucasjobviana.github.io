@@ -92,11 +92,9 @@ window.onload = function(){
         console.info(i)
     }
 
-    palette.colors.forEach(function(colorItem,index){
-         
-        colorItem.htmlElement1.addEventListener('click',function(event){//alert(event.target.style.backgroundColor);
-            palette.selectColor(index);  
-            console.log(palette)
+    palette.colors.forEach(function(colorItem,index){      
+        colorItem.htmlElement1.addEventListener('click',function(event){
+            palette.selectColor(index);//console.log(palette)
         });
     });
 }
