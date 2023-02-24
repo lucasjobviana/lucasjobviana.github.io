@@ -68,6 +68,12 @@ h1 {
     cursor: url(img/balde_25.png) 25 25, default;
 }
 
+#section-pixel-Board>div {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
 .row {
     display: flex;
 }

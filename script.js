@@ -4,13 +4,16 @@ const pixelBoard = document.getElementById('section-pixel-Board');
 const pixelBoardSize = document.getElementById('section-board-Size');
 let row = document.getElementById('button-board-Row');
 let collum = document.getElementById('button-board-Collum');
+let pixelSize = document.getElementById('button-board-Size');
+
+
 
 const pattern = {
     colorsPalette: ['rgb(0,0,0)', 'rgb(144,052,052)', 'rgb(240,128,032)', 'rgb(182,058,111)', 'rgb(55,52,52)', 'rgb(144,144,001)', 'rgb(20,052,152)'],
     selectedColor: 'rgb(0,0,0)',
     row: '5',
     collum: '7',
-    pixelSize: '25px'
+    pixelSize: '40px'
 }
 
 
@@ -98,9 +101,13 @@ const defineClicks = () => {
 
         console.log(element.id)
 
+        pattern.pixelSize = pixelSize.value + 'px';
+
         switch (element.id) {
             case 'button-add-Board': addPixelBoard(row.value, collum.value, []); break;
-            case 'button-generate-Board': definePixelBoard(row.value, collum.value, []); break;
+            case 'button-generate-Board': definePixelBoard(row.value, collum.value, []);
+                break;
+            case 'button-pixel-Size': pattern.pixelSize = '60px'; console.log(pattern.pixelSize); break;
         }
     }
 
@@ -130,6 +137,7 @@ const definePattern = () => {
 }
 
 window.onload = () => {
+    pixelSize.value = pattern.pixelSize.substring(0, pattern.pixelSize.length - 2);
 
     pattern.colorsPalette.forEach((backgroundColor) => {
         const color = document.createElement('div');
@@ -139,6 +147,10 @@ window.onload = () => {
 
     definePattern();
     defineClicks();
+
+    document.getElementById('left').addEventListener('click', function () {
+        pixelBoard.children[0].style.right = '40px'
+    });
 
 }
 
@@ -164,6 +176,8 @@ function pixelAdd(qtdPixel, htmlRow, matrizColor, orderPixel) {//Int - Adiciona 
         pixel.className = 'pixel';
         pixel.style.backgroundColor = Array.isArray(matrizColor) ? matrizColor[orderPixel] : corFundo;
         //pixel.textContent = orderPixel - 1;
+        pixel.style.width = pattern.pixelSize;
+        pixel.style.height = pattern.pixelSize;
         htmlRow.append(pixel);
         orderPixel++;
     }
@@ -171,12 +185,15 @@ function pixelAdd(qtdPixel, htmlRow, matrizColor, orderPixel) {//Int - Adiciona 
 }
 
 function pixelRowAdd(qtdRows, qtdCollums, matrizColor) {//Null - Adiciona (qtdRows*)Row  ao #pixel-board
-    let pixelBoard = document.getElementById('section-pixel-Board');
+    let sectionPixelBoard = document.getElementById('section-pixel-Board');
+    let newBoard = document.createElement('div');
+    pixelBoard.append(newBoard);
+
     let orderPixel = 2;
     for (let i = 0; i < qtdRows; i += 1) {
         let row = document.createElement('div');
         row.className = 'row';
-        pixelBoard.append(row);
-        orderPixel = pixelAdd(qtdCollums, row, matrizColor, orderPixel);
+        newBoard.append(row);
+        sectionPixelBoard = pixelAdd(qtdCollums, row, matrizColor, orderPixel);
     }
 }
