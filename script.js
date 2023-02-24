@@ -96,10 +96,11 @@ const defineClicks = () => {
     pixelBoardSize.onclick = (event) => {
         const element = event.target;
 
-
+        console.log(element.id)
 
         switch (element.id) {
-            case 'button-add-Board': definePixelBoard(row.value, collum.value, []); break;
+            case 'button-add-Board': addPixelBoard(row.value, collum.value, []); break;
+            case 'button-generate-Board': definePixelBoard(row.value, collum.value, []); break;
         }
     }
 
@@ -113,13 +114,19 @@ const defineColorsAtThePalette = (colors) => {
     });
 }
 
-const definePixelBoard = (row, collum, matrizColor) => {
+const addPixelBoard = (row, collum, matrizColor) => {
     pixelRowAdd(row, collum, matrizColor);
+}
+
+const definePixelBoard = (row, collum, matrizColor) => {
+    let pixelBoard = document.getElementById('section-pixel-Board');
+    pixelBoard.innerHTML = '';
+    addPixelBoard(row, collum, []);
 }
 
 const definePattern = () => {
     defineColorsAtThePalette(pattern.colorsPalette);
-    definePixelBoard(pattern.row, pattern.collum, []);
+    addPixelBoard(pattern.row, pattern.collum, []);
 }
 
 window.onload = () => {
