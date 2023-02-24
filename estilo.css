@@ -1,81 +1,81 @@
-.clickable:hover {
-    cursor: pointer;  
+#page-arts-Pixel {
+    display: flex;
+    flex-direction: column;
+    min-width: 20px;
 }
 
 body {
-    background-color: blueviolet;
-    max-width: 3000px;
+    min-width: 20px;
 }
 
-#color-palette {
-    position: sticky;
-    top: 0.1px;
-    
+
+#page-arts-Pixel>section {
     display: flex;
+    flex-wrap: wrap;
+}
+
+#section-color-Palette {
     flex-direction: row;
     justify-content: center;
-    width: 100px;
-    height: 25px;  
-    
 }
 
-.funcionalidades {
-    text-align: center;
+#section-board-Size {
+    position: fixed;
+    right: 0px;
+    top: 0px;
+    flex-direction: column;
+
+}
+
+#section-board-Size label {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.tools {
+    justify-content: center;
 }
 
 .color {
-    border-radius: 50%;
-    border: 1px solid #000000;
-    margin: 1px;
-    flex-grow: 1;/*define proporção de largura por indice*/
+    width: 40px;
+    height: 40px;
+    margin: 5px;
+    border-radius: 70%;
+    opacity: 0.6;
 }
 
-.color:hover {  
-    opacity:0.4;
+.color:hover {
+    opacity: 1;
 }
 
-.selected {
-   
-    opacity:2;
-}
-.color-selected {
-    background-color: blue;
-    opacity:0.4;
+.clickable:hover {
+    cursor: pointer;
 }
 
-main {
+h1 {
+    text-align: center;
+}
+
+
+
+#section-pixel-Board {
     display: flex;
-    justify-content: center;
-}
-
-.color-paint {
-    background-color: brown;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    width: 200px;
-    height: 200px;
-    
-    
-    flex-wrap: wrap;
+    position: static;
+    flex-direction: column;
+    align-items: center;
+    background-color: purple;
 }
 
 .row {
     display: flex;
-    flex-wrap: nowrap;
 }
 
 .pixel {
-    /*flex-grow: 1;define proporção de largura por indice*/
-    height: 40px; 
     width: 40px;
-    border: 1px solid #000000;
+    height: 40px;
+    display: inline-block;
+    border: 1px solid black;
+    background-color: aquamarine;
 
-       cursor: url(img/a_25x.png),default;
-
-    background-color: white;
-}
-
-.whiteCursor{
-    cursor: url(img/white.png ),default;
 }
