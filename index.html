@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="estilo.css" />
+  <title>Paleta de Cores</title>
+  <script src="script.js" defer></script>
+
+</head>
+
+<body>
+  <section id="page-arts-Pixel">
+    <h1 id="title">Paleta de Cores</h1>
+
+    <section id="section-color-Palette" class="color-Palette">
+
+    </section>
+
+    <section id="section-board-Size">
+      <label for="button-board-Row">Row:
+        <input type="number" id="button-board-Row" min="1" max="30" title="Enter a number between 1 and 30." />
+      </label>
+
+      <label for="button-board-Collum">Collum:
+        <input type="number" id="button-board-Collum" min="1" max="30" title="Enter a number between 1 and 30." />
+      </label>
+
+      <button id="button-generate-Board" class="clickable">Generate</button>
+    </section>
+
+    <section id="tools" class="tools">
+
+      <button id="button-random-Color" class="clickable">New palette</button>
+      <button id="button-pattern-Color" class="clickable">Main palette</button>
+      <button id="button-clear-Board" class="clickable">Clear</button>
+      <button id="button-clean-Pixel" class="clickable">Rubber</button>
+      <button id="button-save-Board" class="clickable">Save</button>
+
+    </section>
+
+    <main>
+      <div id="section-pixel-Board" class="pixel-Board"></div>
+    </main>
+
+  </section>
+</body>
+
+</html
