@@ -30,6 +30,7 @@ const defineClicks = () => {
         const element = event.target;
 
         const getAleatoryCollor = () => {
+
             return 'rgb(100,114,189)'
         }
 
