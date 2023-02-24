@@ -156,7 +156,7 @@ function pixelAdd(qtdPixel, htmlRow, matrizColor, orderPixel) {//Int - Adiciona 
         let pixel = document.createElement('div');
         pixel.className = 'pixel';
         pixel.style.backgroundColor = Array.isArray(matrizColor) ? matrizColor[orderPixel] : corFundo;
-        pixel.textContent = orderPixel - 1;
+        //pixel.textContent = orderPixel - 1;
         htmlRow.append(pixel);
         orderPixel++;
     }
