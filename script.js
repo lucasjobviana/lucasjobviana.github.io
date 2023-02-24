@@ -2,9 +2,11 @@ const paletteColor = document.getElementById('section-color-Palette');
 const tools = document.getElementById('tools');
 
 const pattern = {
-    colorsPalette: ['rgb(0,0,0)', 'rgb(144,052,052)', 'rgb(240,128,032)', 'rgb(182,058,111)'],
+    colorsPalette: ['rgb(0,0,0)', 'rgb(144,052,052)', 'rgb(240,128,032)', 'rgb(182,058,111)', 'rgb(144,052,052)', 'rgb(144,052,052)', 'rgb(144,052,052)'],
     selectedColor: 'rgb(0,0,0)'
 }
+
+
 
 const defineClicks = () => {
 
@@ -22,16 +24,12 @@ const defineClicks = () => {
         }
     }
 
-
-
-
-
     tools.onclick = (event) => {
         const element = event.target;
 
         const getAleatoryCollor = () => {
-
-            return 'rgb(100,114,189)'
+            let a = generateColor();
+            return a;
         }
 
 
@@ -42,15 +40,9 @@ const defineClicks = () => {
             }
             return aleatoryCollors;
         }
-
-        const defineColorsAtThePalette = (colors) => {
-            let colorElements = paletteColor.children;
-
-            colors.forEach((color, i) => {
-                colorElements[i].style.backgroundColor = color;
-            });
-        }
-
+        ///////////////////////////////////////////////////
+        //defineColorsAtThePalette foi para escopo global//
+        ///////////////////////////////////////////////////
 
         const defineAleatoryColorsAtThePalette = () => {
             let aleatoryCollors = getAleatoryCollors(pattern.colorsPalette.length - 1);
@@ -65,20 +57,56 @@ const defineClicks = () => {
 
 }
 
+const defineColorsAtThePalette = (colors) => {
+    let colorElements = paletteColor.children;
+
+    colors.forEach((color, i) => {
+        colorElements[i].style.backgroundColor = color;
+    });
+}
+
 const definePattern = () => {
 
-    pattern.colorsPalette.forEach((backgroundColor) => {
+    defineColorsAtThePalette(pattern.colorsPalette);
+
+    /*
+        pattern.colorsPalette.forEach((backgroundColor) => {
         const color = document.createElement('div');
         color.classList.add('clickable', 'color');
         color.style.backgroundColor = backgroundColor;
 
         paletteColor.append(color);
-    });
+     });
+    */
+
 
 }
 
 window.onload = () => {
+
+    pattern.colorsPalette.forEach((backgroundColor) => {
+        const color = document.createElement('div');
+        color.classList.add('clickable', 'color');
+        paletteColor.append(color);
+    });
+
     definePattern();
     defineClicks();
 
+}
+
+///////////////////////original//////////////////////////////////////////////
+
+function generateColor() {//String - Retorna uma cor hexadecimal.
+    const letters = '0123456789ABCDEF';
+    let color;
+
+    do {
+        color = '#';
+        for (let i = 0; i < 6; i++) {
+            color += letters[Math.floor(Math.random() * 15)];
+        }
+    } while (color === '#0000000' || color === '#FFFFFF');
+
+    return color;
 }
