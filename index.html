@@ -1,51 +1,49 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-  <head>
-    <meta charset="utf-8">
-    <link rel="stylesheet" href="estilo.css" />
-    <title>Paleta de Cores</title>
-    <script src="script.js"></script>
 
-  </head>
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="estilo.css" />
+  <title>Paleta de Cores</title>
+  <script src="script.js" defer></script>
 
-  <body>
-    <section id="page-arts-Pixel">
-      <h1 id="title">Paleta de Cores</h1>
-    
-      <section id="section-color-Palette" class="color-Palette">
-          <div class="color clickable"></div>
-          <div class="color clickable"></div>
-          <div class="color clickable"></div>
-          <div class="color clickable"></div>
-      </section>
+</head>
 
-      <section id="section-board-Size">
-        <label for="button-board-Row">Row:
-          <input type="number" id="button-board-Row" min="1" max="30" title="Enter a number between 1 and 30." />
-        </label>
+<body>
+  <section id="page-arts-Pixel">
+    <h1 id="title">Paleta de Cores</h1>
 
-        <label for="button-board-Collum">Collum:
-          <input type="number" id="button-board-Collum" min="1" max="30" title="Enter a number between 1 and 30." />
-        </label>
+    <section id="section-color-Palette" class="color-Palette">
 
-        <button id="button-generate-Board" class="clickable">Generate</button>  
-      </section>
+    </section>
 
-      <section class="tools">
-        
-        <button id="button-random-Color" class="clickable" >New palette</button>
-        <button id="button-pattern-Color" class="clickable" >Main palette</button>
-        <button id="button-clear-Board" class="clickable" >Clear</button>
-        <button id="button-clean-Pixel" class="clickable" >Rubber</button>
-        <button id="button-save-Board" class="clickable" >Save</button>
+    <section id="section-board-Size">
+      <label for="button-board-Row">Row:
+        <input type="number" id="button-board-Row" min="1" max="30" title="Enter a number between 1 and 30." />
+      </label>
 
-      </section>
+      <label for="button-board-Collum">Collum:
+        <input type="number" id="button-board-Collum" min="1" max="30" title="Enter a number between 1 and 30." />
+      </label>
 
-      <main>
-        <section id="section-pixel-Board" class="pixel-Board"></section>
-      </main>
+      <button id="button-generate-Board" class="clickable">Generate</button>
+    </section>
 
-    </section> 
-  </body>
+    <section id="tools" class="tools">
+
+      <button id="button-random-Color" class="clickable">New palette</button>
+      <button id="button-pattern-Color" class="clickable">Main palette</button>
+      <button id="button-clear-Board" class="clickable">Clear</button>
+      <button id="button-clean-Pixel" class="clickable">Rubber</button>
+      <button id="button-save-Board" class="clickable">Save</button>
+
+    </section>
+
+    <main>
+      <section id="section-pixel-Board" class="pixel-Board"></section>
+    </main>
+
+  </section>
+</body>
+
 </html
-

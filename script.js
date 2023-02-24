@@ -1,107 +1,83 @@
+const paletteColor = document.getElementById('section-color-Palette');
+const tools = document.getElementById('tools');
 
-const config = {
-    palleteColorPixelSize: '20px',
-    paletteColorSize: 4,
-    pixelSize: '20px',
-    borderSize: '1px',
-    colorSize: '15px',
-    backgroundColor: '#FFFFFF'
+const pattern = {
+    colorsPalette: ['rgb(0,0,0)', 'rgb(144,052,052)', 'rgb(240,128,032)', 'rgb(182,058,111)'],
+    selectedColor: 'rgb(0,0,0)'
 }
 
+const defineClicks = () => {
 
-class Pixel {
-    constructor() {
-        this.size = config.pixelSize;
-        this.backgroundColor = config.backgroundColor,
-        this.borderSize = config.borderSize,
-        this.size = config.pixelSize,
-        this.previousColor = '#FFFFFF';
+    paletteColor.onclick = (event) => {
+        const element = event.target;
+
+        const selectColor = () => {
+            pattern.selectedColor = element.style.backgroundColor;
+            console.log('Cor selecionada: ', pattern.selectedColor)
+        }
+
+
+        switch (element.tagName) {
+            case 'DIV': selectColor(); break;
+        }
     }
-    paint(color) {
-        this.backgroundColor = color;
+
+
+
+
+
+    tools.onclick = (event) => {
+        const element = event.target;
+
+        const getAleatoryCollor = () => {
+            return 'rgb(100,114,189)'
+        }
+
+
+        const getAleatoryCollors = (size) => {
+            const aleatoryCollors = [pattern.colorsPalette[0]];
+            for (let i = 0; i < size; i += 1) {
+                aleatoryCollors.push(getAleatoryCollor())
+            }
+            return aleatoryCollors;
+        }
+
+        const defineColorsAtThePalette = (colors) => {
+            let colorElements = paletteColor.children;
+
+            colors.forEach((color, i) => {
+                colorElements[i].style.backgroundColor = color;
+            });
+        }
+
+
+        const defineAleatoryColorsAtThePalette = () => {
+            let aleatoryCollors = getAleatoryCollors(pattern.colorsPalette.length - 1);
+            defineColorsAtThePalette(aleatoryCollors)
+        }
+
+        switch (element.id) {
+            case 'button-random-Color': defineAleatoryColorsAtThePalette(); break;
+        }
     }
-    clean() {
-        this.backgroundColor = config.backgroundColor;
-    }
+
+
 }
 
-class Color{ //extends HtmlElement
-    constructor(hexaColor) {
-        this.backgroundColor = (hexaColor) ? hexaColor : config.backgroundColor;
-        this.size = config.colorSize;
-        this.isSelected = false;
-        this.htmlElement1 = '_undefined_';
-    }
+const definePattern = () => {
 
-    select() {
-        this.isSelected = true;
-    }
-    unSelect() {
-        this.isSelected = false;
-    }
-}
+    pattern.colorsPalette.forEach((backgroundColor) => {
+        const color = document.createElement('div');
+        color.classList.add('clickable', 'color');
+        color.style.backgroundColor = backgroundColor;
 
-class Palette {
-
-    constructor(arrayColor) {
-        this.colors = arrayColor;
-    }
-    add(newColorPalette){
-        this.colors.push(newColorPalette);
-    }
-    rmv(colorPalette) {
-        this.colors.remove(colorPalette);
-    }
-    selectColor(index) {
-        this.colors.forEach(function(colorItem,index){
-            colorItem.isSelected = false;
-        });
-        this.colors[index].isSelected = true; 
-    }
-}
-
-class PixelBoard {
-    constructor(arrayPixel) {
-        this.boardCollum = config.boardCollum;
-        this.boardRow = config.boardRow;
-        this.pixels = arrayPixel;
-    }
-}
-
-let paletteHTML = document.getElementById('section-color-Palette');
-console.log(paletteHTML);
-let arrayColor = [new Color('#000000'),new Color('#14ABB0'),new Color('#00FF22'), new Color('#DD5444')];
-let palette = new Palette(arrayColor);
-let colorsElement = document.getElementsByClassName('color');
-
-
-function addHtmlElementToObects() {
-    palette.colors[0].htmlElement1 = colorsElement[0];
-    palette.colors[1].htmlElement1 = colorsElement[1];
-    palette.colors[2].htmlElement1 = colorsElement[2];
-    palette.colors[3].htmlElement1 = colorsElement[3];
-}
-
-
-window.onload = function(){
- 
-    addHtmlElementToObects();
-
-    for (let i = 0; i < palette.colors.length ; i+=1) {
-        palette.colors[i].htmlElement1.style.backgroundColor = arrayColor[i].backgroundColor;
-        console.info(i)
-    }
-
-    palette.colors.forEach(function(colorItem,index){      
-        colorItem.htmlElement1.addEventListener('click',function(event){
-            palette.selectColor(index);//console.log(palette)
-        });
+        paletteColor.append(color);
     });
+
 }
 
+window.onload = () => {
+    definePattern();
+    defineClicks();
 
-
-
-
-
-
+}
