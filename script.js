@@ -1,10 +1,14 @@
 const paletteColor = document.getElementById('section-color-Palette');
 const tools = document.getElementById('tools');
+const pixelBoard = document.getElementById('section-pixel-Board');
+const pixelBoardSize = document.getElementById('section-board-Size');
+let row = document.getElementById('button-board-Row');
+let collum = document.getElementById('button-board-Collum');
 
 const pattern = {
     colorsPalette: ['rgb(0,0,0)', 'rgb(144,052,052)', 'rgb(240,128,032)', 'rgb(182,058,111)', 'rgb(55,52,52)', 'rgb(144,144,001)', 'rgb(20,052,152)'],
     selectedColor: 'rgb(0,0,0)',
-    row: '22',
+    row: '5',
     collum: '7',
     pixelSize: '25px'
 }
@@ -61,6 +65,43 @@ const defineClicks = () => {
         }
     }
 
+    pixelBoard.onclick = (event) => {
+        const element = event.target;
+        element.style.backgroundColor = pattern.selectedColor;
+
+        const paintPixel = () => {
+            if (pattern.selectedColor == 'rgb(0,0,0)') {
+                //alert('ehzero');
+                element.onmousemove = function (event) {
+                    event.target.style.cursor = 'url(img/white.png) 0 25, default';
+                }
+            }
+        }
+
+        const paintBackground = () => {
+            if (pattern.selectedColor == 'rgb(0,0,0)') {
+                //alert('ehzero');
+                element.onmousemove = function (event) {
+                    event.target.style.cursor = 'url(img/balde_branco.png) 25 25, default';
+                }
+            }
+        }
+
+        switch (element.tagName) {
+            case 'DIV': paintPixel(); break;
+            case 'SECTION': paintBackground(); break;
+        }
+    }
+
+    pixelBoardSize.onclick = (event) => {
+        const element = event.target;
+
+
+
+        switch (element.id) {
+            case 'button-add-Board': definePixelBoard(row.value, collum.value, []); break;
+        }
+    }
 
 }
 
