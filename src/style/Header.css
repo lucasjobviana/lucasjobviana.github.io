@@ -9,93 +9,6 @@
     }
 }
 
-.Header {
-    background-color: gray;
-    width: 200px;
-    font-size: calc(10px + 2vmin);
-    color: rgb(255, 255, 255);
-    padding: 1.5%;
-
-}
-
-.Header div {
-    margin-bottom: 7px;
-}
-
-.Header-name-container {
-    width: 98%;
-    text-align: center;
-    border-radius: 12px;
-    background-color: rgb(52, 50, 56);
-    opacity: 0.8;
-    font-size: 13px;
-
-
-}
-
-.Header-name-container img {
-    width: 100%;
-}
-
-.Header-contact-container {
-    width: 98%;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    border-radius: 12px;
-    background-color: rgb(52, 50, 56);
-    opacity: 0.8;
-
-}
-
-.Header-contact-container img {
-    width: 20%;
-    margin: 2%;
-
-}
-
-.Header-tools-container {
-    width: 98%;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    border-radius: 12px;
-    background-color: rgb(52, 50, 56);
-    opacity: 0.8;
-
-
-}
-
-.Header-tools-container img {
-    width: 20%;
-    margin: 2%;
-}
-
-.Header-nav-container {
-    width: 98%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    border-radius: 12px;
-    background-color: rgb(52, 50, 56);
-    opacity: 1;
-
-
-}
-
-.Header-nav-container button {
-    width: 80%;
-    margin: 5px;
-    font-size: large;
-    height: 30px;
-
-}
-
-.Header-nav-container button:hover {
-    cursor: pointer;
-}
-
-
 @keyframes App-logo-spin {
     from {
         transform: rotate(0deg);
@@ -104,4 +17,77 @@
     to {
         transform: rotate(360deg);
     }
+}
+
+.Header {
+    background-color: rgb(255, 255, 255,0.22);
+    width: 200px;
+    font-size: calc(10px + 2vmin);
+    color: rgb(255, 255, 255);
+    padding: 1.5%;
+    text-align: center;
+}
+
+.Header div {
+    margin-bottom: 7px;
+    border: 1px solid white;	
+    width: 98%;
+    background-color: rgb(56, 56, 56,0.89);
+    border-radius: 12px;
+}
+
+.Header-name-container { 
+    font-size: 13px;
+}
+
+.Header-name-container img {
+    width: 100%;
+  
+}
+
+.Header-contact-container {
+     display:flex;
+}
+
+.Header-contact-container a { 
+     display:flex;
+     justify-content:center; 
+     margin: 2%;
+}
+
+.Header-contact-container img {
+    width: 70%;
+
+}
+
+.i {
+ border-radius:50%;
+}
+
+.Header-tools-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.Header-tools-container img {
+    width: 20%;
+    margin: 2%;
+}
+
+.Header-nav-container {
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+}
+
+.Header-nav-container button {
+    width: 80%;
+    margin: 5px;
+    font-size: large;
+    height: 30px;
+}
+
+.Header-nav-container button:hover {
+    cursor: pointer;
 }
