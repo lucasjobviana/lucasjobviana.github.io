@@ -3,3 +3,12 @@
   padding: 0px;
   border: 0px;
 }
+
+body {}
+
+#root {
+  background-color: aqua;
+
+  width: 100vi;
+  height: 100vi;
+}
