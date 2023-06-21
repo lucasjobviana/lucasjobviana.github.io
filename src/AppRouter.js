@@ -9,8 +9,7 @@ function AppRouter() {
     <div className="App">
       <Switch>
         <Route exact path="/" component={ App } />
-      </Switch>
-        
+      </Switch>    
     </div>
   );
 }
