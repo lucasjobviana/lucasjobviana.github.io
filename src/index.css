@@ -8,7 +8,6 @@ body {}
 
 #root {
   background-color: aqua;
-
-  width: 100vi;
-  height: 100vi;
+  width: 100vw;
+  height: 100vh;
 }

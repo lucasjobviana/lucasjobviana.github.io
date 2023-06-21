@@ -1,0 +1,12 @@
+.Main {
+    background-color: rgba(224, 40, 40, 0.22);
+    width: calc(100% - calc(200px + calc(3% + 0px)));
+    /*Total vw - (menuLateral+padding)*/
+    min-height: 40vh;
+    /* width: calc(100% - 200px); */
+    font-size: calc(10px + 2vmin);
+    color: rgb(255, 255, 255);
+    text-align: center;
+    position: relative;
+
+}
