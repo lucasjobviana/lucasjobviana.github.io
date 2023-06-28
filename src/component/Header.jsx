@@ -5,14 +5,19 @@ import NameConteiner from './NameConteiner';
 import NavConteiner from './NavConteiner';
 
 import '../style/Header.css';
+import ButtonHideConteiner from './ButtonHideConteiner';
 
 const Header = () =>  {
   return ( 
     <header className="Header">   
-      <NameConteiner />
+    <div className="conteiner">
+    <NameConteiner />
       <ContactConteiner />
       <ToolsConteiner />
       <NavConteiner />
+    </div>
+      
+      <ButtonHideConteiner />
     </header>
   )
 }
