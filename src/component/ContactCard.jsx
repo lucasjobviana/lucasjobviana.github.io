@@ -1,4 +1,6 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+ 
 
 const ContactCard = ({
   iconLink: { 
@@ -14,4 +16,12 @@ const ContactCard = ({
   );
 }
 
+ContactCard.propTypes = {
+  iconLink: PropTypes.shape({
+    to: PropTypes.string,
+    altText: PropTypes.string,
+    urlIcon: PropTypes.string,
+    className: PropTypes.string
+  }).isRequired
+}
 export default ContactCard;
