@@ -1,5 +1,5 @@
 
-<link rel="stylesheet" type="text/css" href="README.css" /> 
+<link rel="stylesheet" type="text/css" href="README.css"> 
 <h1>
 <a  hrf="https://lucasjobviana.github.io/" >Portifólio - Lucas Job Viana</a>
 <h1>
