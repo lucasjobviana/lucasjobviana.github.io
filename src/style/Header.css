@@ -19,11 +19,16 @@
     }
 }
 
+:root {
+	--color:black;
+	--color-reverse:white;
+}
+
 .Header {
-    background-color: rgba(3, 3, 3, 0.7);
+    background-color: rgba(3, 3, 0, 0.7);
     width: 200px;
     font-size: calc(8px + 2vmin);
-    color: rgb(255, 255, 255);
+    color: white;
     padding: 1.5%;
     text-align: center;
     position: fixed;
@@ -35,9 +40,9 @@
     z-index: 1;
 }
 
-.Header div button,
-h1 {
-    display: inline;
+.Header div button {
+    background-color:var(--color-reverse);
+    color:var(--color);
 }
 
 .disabled {
@@ -51,11 +56,6 @@ h1 {
     transition: all .2s cubic-bezier(.5, .1, .75, 1.35);
 }
 
-
-
-
-
-
 .Header>div>div {
     margin-bottom: 7px;
     border: 1px solid white;
@@ -65,12 +65,13 @@ h1 {
 }
 
 .Header-name-container {
-
     font-size: 70%;
 }
 
 .Header-name-container img {
-    width: 100%;
+    width: 99%;
+    border-radius: 9%;
+    opacity:0.66;
 
 }
 

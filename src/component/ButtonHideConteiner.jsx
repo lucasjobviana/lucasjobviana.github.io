@@ -2,10 +2,8 @@ import React, { useState } from 'react';
 import '../style/BtnHideConteiner.css'
 
 const ButtonHideConteiner = () => {
-
     const [icon, setIcon] = useState({icon:'◀',text:'hide'});
-     
-
+    
     const toogleIcon = () => {
         const conteiner = document.querySelector('.Header');
         console.log(conteiner)

@@ -1,19 +1,21 @@
 import React from 'react';
+import NavCard from './NavCard';
 import { useHistory } from 'react-router-dom/cjs/react-router-dom.min';
+import { useSelector } from 'react-redux';
 
 const NavConteiner = () => {
+  const { user: {buttonsNav} } = useSelector( (store) => store );
   const history = useHistory();
-
+  console.log(buttonsNav)
+  
   const handleClick = ({target: {value}}) => {
-    console.log(value)
     history.push(value);
   }
     return (
       <div className='Header-nav-container'>
-        <button value='/' onClick={(a)=>{handleClick(a);}}>Home</button>
-        <button value='/projects' onClick={(a)=>{handleClick(a);}}>Projetos</button>
-        <button value='/tools' onClick={(a)=>{handleClick(a);}}>Ferramentas</button>
-        <button value='/about' onClick={(a)=>{handleClick(a);}}>Sobre</button>
+      {
+      buttonsNav.map((button,index)=><NavCard key={ index } buttonNav={{to:button.to,labelText:button.labelText,handleClick}} />)
+      }
       </div>
     )
 }

@@ -19,6 +19,19 @@ const INITIAL_STATE = {
     to: 'mailto:lucasjobvianna@gmail.com?subject=&body=',
     urlIcon: 'https://icons.veryicon.com/png/o/internet--web/billion-square-cloud/mail-213.png',
     altText: 'Link para enviar um email para o autor.'
+  }],
+  buttonsNav: [{
+  to: '/',
+  labelText: 'Home',
+  },{
+  to: '/About',
+  labelText: 'Sobre',
+  },{
+  to: '/Projects',
+  labelText: 'Projetos',
+  },{
+  to: '/tools',
+  labelText: 'Feramentas',
   }]
 };
 

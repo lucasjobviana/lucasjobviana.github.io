@@ -1,10 +1,13 @@
-import React from 'react'
+import React from 'react';
+import job from '../img/lucas-job-viana.jpg';
+
 
 const NameConteiner = () => {
+console.log(job)
     return (
         <div className='Header-name-container'>
         <h1>Full Stack </h1>
-        <img src="https://cdn-icons-png.flaticon.com/512/3097/3097037.png" alt="logo" />
+        <img src={job} alt="logo" />
         <h1>Lucas Job Viana</h1>
       </div> 
     )
