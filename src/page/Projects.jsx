@@ -3,13 +3,8 @@ import '../style/Projects.css';
 
 const Projects = () => {
   return (
-    <div className='app'>
-      <div className='Projects page'>
-        projects
-        <button onClick={() => {
-          console.log('clickei');
-        }}>proxima</button>
-      </div>
+    <div className='Projects page'>
+      projects
     </div>
   );
 }
