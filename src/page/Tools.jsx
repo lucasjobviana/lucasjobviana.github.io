@@ -1,11 +1,13 @@
 import React from 'react';
 import '../style/Tools.css';
 
-const Tools = () =>  {
+const Tools = () =>  {	
   return (
+   <div className='app'>
     <div className='Tools'>    
          tools
     </div>
+   </div> 
   );
 }
 

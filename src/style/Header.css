@@ -45,16 +45,7 @@
     color:var(--color);
 }
 
-.disabled {
-    font-size: 0px;
-    width: 0px;
-    padding: 0px;
-    transition: all .2s cubic-bezier(.5, .1, .75, 1.35);
-}
 
-.enabled {
-    transition: all .2s cubic-bezier(.5, .1, .75, 1.35);
-}
 
 .Header>div>div {
     margin-bottom: 7px;

@@ -3,8 +3,10 @@ import '../style/About.css';
 
 const About = () =>  {
   return (
+   <div className='app'>
     <div className='About'>    
          about
+    </div>
     </div>
   );
 }

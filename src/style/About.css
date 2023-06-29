@@ -1,8 +1,8 @@
 .About {
     background-color: rgba(40, 224, 80, 0.22);
 
-    width: calc(100% - 25px);
-    height: 100%;
+    width: calc(100vw - 25px);
+    height: 100vh;
 
     min-height: 40vh;
 

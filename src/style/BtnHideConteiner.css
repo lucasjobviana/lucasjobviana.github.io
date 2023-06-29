@@ -12,6 +12,11 @@
     background-color: rgb(255, 255, 255, 0.7);
 }
 
+.btn-hide-conteiner:hover {
+	cursor: pointer;
+	
+}
+
 .btn-hide-conteiner h1 {
     font-size: x-large;
 }
