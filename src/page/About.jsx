@@ -1,12 +1,12 @@
 import React from 'react';
 import '../style/About.css';
 
-const About = () =>  {
+const About = () => {
   return (
-   <div className='app'>
-    <div className='About'>    
-         about
-    </div>
+    <div className='app'>
+      <div className='About page'>
+        about
+      </div>
     </div>
   );
 }

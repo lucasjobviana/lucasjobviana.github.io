@@ -4,17 +4,17 @@
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
-
-    right: -25px;
+    right: -20px;
     height: 100%;
-    width: 25px;
+    width: 20px;
     margin-left: 5px;
-    background-color: rgb(255, 255, 255, 0.7);
+    background-color: azure;
+    z-index: 20;
 }
 
 .btn-hide-conteiner:hover {
-	cursor: pointer;
-	
+    cursor: pointer;
+
 }
 
 .btn-hide-conteiner h1 {

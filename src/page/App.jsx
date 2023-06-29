@@ -1,12 +1,12 @@
 import React from 'react';
-import Main from '../component/Main';
+import Main from '../page/Main';
 import '../style/App.css';
 
-const App = () =>  {
+const App = () => {
   return (
     <div className='app'>
-        {/* <Header /> */}
-        <Main />
+      {/* <Header /> */}
+      <Main />
     </div>
   );
 }
