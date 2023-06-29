@@ -10,30 +10,30 @@ import './style/App.css';
 
 function AppRouter() {
 
-  return (
-    <div className="App">
-      <Header />
-         
-          <Route render={({location}) => (
-       	    <TransitionGroup>
-		     	    <CSSTransition
-		     		    key={location.key}
-		     		    timeout={400}
-		     		    classNames="fade"
-		     	    >
-							 	<Switch>
-									<Route exact path="/" component={ App } />
-									<Route exact path="/projects" component={ Projects } />
-									<Route exact path="/tools" component={ Tools } />
-									<Route exact path="/about" component={ About } />
-								</Switch> 
-       		    </CSSTransition>
-      		  </TransitionGroup>
-          )}
-          />
-        
-    </div>
-  );
+	return (
+		<div className="App">
+			<Header />
+
+			<Route render={({ location }) => (
+				<TransitionGroup>
+					<CSSTransition
+						key={location.key}
+						timeout={400}
+						classNames="fade"
+					>
+						<Switch>
+							<Route exact path="/" component={App} />
+							<Route exact path="/projects" component={Projects} />
+							<Route exact path="/tools" component={Tools} />
+							<Route exact path="/about" component={About} />
+						</Switch>
+					</CSSTransition>
+				</TransitionGroup>
+			)}
+			/>
+
+		</div>
+	);
 }
 
 export default AppRouter; 
