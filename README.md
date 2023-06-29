@@ -1,26 +1,5 @@
 
-<style>
-    h1 {
-        color:gray;
-    }
-    body {
-        text-align:center;
-        font-size: x-small;
-    }
-    a {
-        text-decoration:none;
-        color:gray;
-    }
-    a:hover {
-        cursor:pointer;
-        color:gray; 
-    }
-    li{
-        text-align:justify;
-        margin-top: 20px;
-    }
-</style>
- 
+<link rel="stylesheet" type="text/css" href="README.css" /> 
 <h1>
 <a  hrf="https://lucasjobviana.github.io/" >Portifólio - Lucas Job Viana</a>
 <h1>
