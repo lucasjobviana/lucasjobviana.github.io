@@ -1,13 +1,13 @@
 import React from 'react';
-import Main from '../component/Main';
+import Main from '../page/Main';
 import '../style/App.css';
 
-const App = () =>  {
+const App = () => {
   return (
-    <>
-        {/* <Header /> */}
-        <Main />
-    </>
+    <div className='app'>
+      {/* <Header /> */}
+      <Main />
+    </div>
   );
 }
 

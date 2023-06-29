@@ -20,44 +20,42 @@
 }
 
 :root {
-	--color:black;
-	--color-reverse:white;
+    --color: black;
+    --color-reverse: white;
 }
 
 .Header {
-    background-color: rgba(3, 3, 0, 0.7);
+    background-color: rgba(0, 0, 0, 0.7);
     width: 200px;
     font-size: calc(8px + 2vmin);
     color: white;
-    padding: 1.5%;
+    padding-left: 10px;
+    padding-right: 5px;
+
     text-align: center;
     position: fixed;
     left: 0px;
     height: 100vh;
     display: flex;
-    flex-direction: column;
-    justify-content: start;
+
+
     z-index: 1;
 }
 
+.conteiner {
+    overflow-y: auto;
+}
+
 .Header div button {
-    background-color:var(--color-reverse);
-    color:var(--color);
+    background-color: var(--color-reverse);
+    color: var(--color);
+
 }
 
-.disabled {
-    font-size: 0px;
-    width: 0px;
-    padding: 0px;
-    transition: all .2s cubic-bezier(.5, .1, .75, 1.35);
-}
 
-.enabled {
-    transition: all .2s cubic-bezier(.5, .1, .75, 1.35);
-}
 
 .Header>div>div {
-    margin-bottom: 7px;
+    margin-top: 0.7vw;
     border: 1px solid white;
     width: 98%;
     background-color: rgb(56, 56, 56, 0.89);
@@ -71,7 +69,7 @@
 .Header-name-container img {
     width: 99%;
     border-radius: 9%;
-    opacity:0.66;
+    opacity: 0.66;
 
 }
 

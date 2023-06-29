@@ -1,10 +1,15 @@
 import React from 'react';
 import '../style/Projects.css';
 
-const Projects = () =>  {
+const Projects = () => {
   return (
-    <div className='Projects'>    
-         projects
+    <div className='app'>
+      <div className='Projects page'>
+        projects
+        <button onClick={() => {
+          console.log('clickei');
+        }}>proxima</button>
+      </div>
     </div>
   );
 }
