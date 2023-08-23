@@ -2,3 +2,9 @@
     background-color: rgba(224, 40, 40, 0.22);
     /* definido no App.css */
 }
+
+.Main-title{
+	background-color: rgb(0,0,0,0.4);
+	 text-shadow: 2px 2px #ff0000;
+ 
+}

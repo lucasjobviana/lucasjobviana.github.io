@@ -31,15 +31,12 @@
     color: white;
     padding-left: 10px;
     padding-right: 5px;
-
     text-align: center;
     position: fixed;
     left: 0px;
     height: 100vh;
     display: flex;
-
-
-    z-index: 1;
+    z-index: 3;
 }
 
 .conteiner {
