@@ -2,3 +2,16 @@
     background-color: rgba(74, 26, 206, 0.22);
     /* definido no App.css */
 }
+
+.project-card {
+    background-color: rgba(74, 26, 206, 0.22);
+    margin: 2%;
+    border: 1px solid #4A1ACE;
+    border-radius: 10px;
+}
+
+.project-card img {
+    
+    height: 200px;
+    border-radius: 10px 10px 0 0;
+}
