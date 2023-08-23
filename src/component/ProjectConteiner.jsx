@@ -9,7 +9,7 @@ const ProjectConteiner = () => {
   console.log(iconLinks);
  
   return (
-    <div className='Header-contact-container'>{
+    <div className='projects-container'>{
       projects.map((p,index)=>(
         <ProjectCard key={`project${index}`} project={p}  />
       ))

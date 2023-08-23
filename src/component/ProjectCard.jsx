@@ -1,17 +1,26 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import githubIcon from '../img/github.png';
+import externalIcon from '../img/external.png'
  
 const ProjectCard = ({
   project: { title , description, urlProject, urlRepository, urlImage}
   }) =>  {
   return (  
      <div className='project-card'>
+      <div className='project-card-header'>
       <h3>{title}</h3>
       <h4>{description}</h4>
+        </div>
+      
        
       <img src={urlImage} alt={`imagem do projeto ${title} `} />
-      <a href={urlProject}>Deploy</a>
-      <a href={urlRepository}>Repositório</a>
+      <div className='links-containner'>
+      <a href={urlProject}><img src={githubIcon} alt="Link para o projeto no github." /></a>
+      <a href={urlRepository}><img src={externalIcon} alt="Link para o projeto no github." /></a>
+
+      </div>
+     
      
      </div>
   );
