@@ -23,16 +23,20 @@ const INITIAL_STATE = {
   buttonsNav: [{
     to: '/',
     labelText: 'Home',
-  }, {
-    to: '/about',
-    labelText: 'Sobre',
-  }, {
+  }
+  // , {
+  //   to: '/about',
+  //   labelText: 'Sobre',
+  // }
+  , {
     to: '/projects',
     labelText: 'Projetos',
-  }, {
-    to: '/tools',
-    labelText: 'Feramentas',
-  }]
+  }
+  // , {
+  //   to: '/tools',
+  //   labelText: 'Feramentas',
+  // }
+]
 };
 
 const user = (state = INITIAL_STATE, action) => {
