@@ -32,7 +32,8 @@
 
 
 .btn-direction {
-  position: absolute;
+  position: fixed;
+  top: 50%;
   background-image: url('https://w7.pngwing.com/pngs/655/538/png-transparent-arrow-back-left-arrow-outline-icon.png');
   background-size: 50px;
   opacity: 0.2;
@@ -48,8 +49,8 @@
 }
 
 .prev-page {
+  
   left: 2%;
-
 }
 
 .next-page {

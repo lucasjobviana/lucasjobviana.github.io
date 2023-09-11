@@ -16,8 +16,8 @@ const ProjectCard = ({
        
       <img src={urlImage} alt={`imagem do projeto ${title} `} />
       <div className='links-containner'>
-      <a href={urlProject}><img src={githubIcon} alt="Link para o projeto no github." /></a>
-      <a href={urlRepository}><img src={externalIcon} alt="Link para o projeto no github." /></a>
+      <a href={urlProject}><img src={externalIcon} alt="Link para o projeto no github." /></a>
+      <a href={urlRepository}><img src={githubIcon} alt="Link para o projeto no github." /></a>
 
       </div>
      

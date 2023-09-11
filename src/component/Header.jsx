@@ -9,7 +9,7 @@ import ButtonHideConteiner from './ButtonHideConteiner';
 
 const Header = () =>  {
   return ( 
-    <header className="Header">   
+    <header className="Header disabled">   
     <div className="conteiner">
     <NameConteiner />
       <ContactConteiner />

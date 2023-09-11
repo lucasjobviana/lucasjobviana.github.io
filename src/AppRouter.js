@@ -5,8 +5,8 @@ import { Switch, Route, useHistory, useLocation } from 'react-router-dom/cjs/rea
 import Header from './component/Header';
 import App from './page/App';
 import Projects from './page/Projects';
-import Tools from './page/Tools';
-import About from './page/About';
+// import Tools from './page/Tools';
+// import About from './page/About';
 import './style/App.css';
 
 function AppRouter() {
@@ -54,8 +54,8 @@ function AppRouter() {
 							<Switch>
 								<Route exact path="/" component={App} />
 								<Route exact path="/projects" component={Projects} />
-								<Route exact path="/tools" component={Tools} />
-								<Route exact path="/about" component={About} />
+								{/* <Route exact path="/tools" component={Tools} />
+								<Route exact path="/about" component={About} /> */}
 							</Switch>
 						</CSSTransition>
 					</TransitionGroup>
