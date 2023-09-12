@@ -1,6 +1,6 @@
 [# Portifólio - Lucas Job Viana](https://lucasjobviana.github.io/)
 
-Olá, este respósitorio é para armazenar o meu projeto de portifólio pessoal. Clique no link acima para acessa-lo. 
+Olá, este repósitorio é para armazenar o meu projeto de portifólio pessoal. Clique no link acima para acessa-lo. 
 
 ## Oque é e como funciona ?
 
