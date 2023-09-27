@@ -1,7 +1,8 @@
-* {
+/* * {
   margin: 0px;
   padding: 0px;
   border: 0px;
+  color: white;
 }
 
 body {}
@@ -16,30 +17,24 @@ body {}
        
   
       .wrapper {
-  
-    /* Keeping the Text in the 
-       center of the Screen */
     display: flex;
     justify-content: center;
 }
   
 .typewriter h1,ul,li {
-    /* Content is not revealed 
-       until the animation */
+
     overflow: hidden;
-  
-    /* Keeps the content on a single line */
+
     white-space: nowrap;
   
-    /* Gives that scrolling effect 
-       as the typing happens */
+
     margin: 0 auto;
   
-    /* Typing Effect Animation */
+
     animation: typing 1.5s steps(30, end)
 }
   
-/* Typing Effect on Website Loading */
+
 @keyframes typing {
     from {
         width: 0
@@ -47,4 +42,4 @@ body {}
     to {
         width: 100%
     }
-}
+} */
