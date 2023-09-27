@@ -1,28 +1,45 @@
 import React from 'react';
 import ProjectContainer from '../component/ProjectConteiner';
 // import '../style/Projects.css';
-import { AppBar, Box, Button, Card, CardActions, CardContent, CardMedia, Container, CssBaseline, Grid, Stack, ThemeProvider, Toolbar, Typography, createTheme } from '@mui/material';
-import { CameraswitchOutlined,  } from '@mui/icons-material';
+import { AppBar, Avatar, Box, Button,   Container, CssBaseline, IconButton, Link, Stack, ThemeProvider, Toolbar, Typography, createTheme } from '@mui/material';
+// import { CameraswitchOutlined, AccountCircle } from '@mui/icons-material';
+import { DarkTheme, LightTheme } from '../themes';
+import a from '../img/lucas-job-viana.jpg';
+import { Email, GitHub, LinkedIn, WhatsApp } from '@mui/icons-material';
+// import { ContactConteiner } from '../component/ContactConteiner'
+import ContactConteiner from '../component/ContactConteiner';
 
-
+const theme = DarkTheme;
 const defaultTheme = createTheme();
-const cards = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 
 const Projects = () => {
+
+  function Copyright() {
+    return (
+      <Typography variant="body2" color="text.secondary" align="center">
+        {'Copyright © '}
+        <Link color="inherit" href="https://www.linkedin.com/in/lucasjobviana/">
+          Lucas Job Viana
+        </Link>{' '}
+        {new Date().getFullYear()}
+        {'.'}
+      </Typography>
+    );
+  }
+
   return (
-    <ThemeProvider className='Projects page' theme={defaultTheme}>
+    <ThemeProvider className='Projects page' theme={theme}>
       <CssBaseline />
       <AppBar position="relative">
         <Toolbar>
-          <CameraswitchOutlined sx={{ mr: 2 }} />
-          <Typography variant="h6" color="inherit" noWrap>
+         <Avatar sx={{mr:2}} src={a} />
+          <Typography variant="h6" color={theme.palette.primary.main} noWrap>
             Lucas Job Viana
           </Typography>
         </Toolbar>
       </AppBar>
 
       <main>
-        {/* Hero unit */}
         <Box
           sx={{
             bgcolor: 'background.paper',
@@ -40,25 +57,28 @@ const Projects = () => {
             >
               Projetos
             </Typography>
-            <Typography variant="h5" align="center" color="text.secondary" paragraph>
-              Something short and leading about the collection below—its contents,
-              the creator, etc. Make it short and sweet, but not too short so folks
-              don&apos;t simply skip over it entirely.
+            <Typography variant="h6" align="center" color="text.secondary" paragraph>
+              Hello  visitante. Bem-vindo à seção 'Meus Projetos'! Nesta página você encontrará uma lista com meus
+              principais projetos, tanto pessoais quanto acadêmicos.
             </Typography>
             <Stack
               sx={{ pt: 4 }}
               direction="row"
-              spacing={2}
+              spacing={1.4}
               justifyContent="center"
             >
-              <Button variant="contained">Main call to action</Button>
-              <Button variant="outlined">Secondary action</Button>
+              <ContactConteiner />
+              {/* <Button variant='contained' size="small" startIcon={<WhatsApp />} href="https://github.com/muhimasri" target='_blank' >Whatsapp</Button>
+              <Button variant='outlined' size="small" startIcon={<LinkedIn />} href="https://github.com/muhimasri" target='_blank' >Linkedin</Button>
+              <Button variant='outlined' size="small" startIcon={<Email />} href="https://github.com/muhimasri" target='_blank' >Email</Button> */}
             </Stack>
           </Container>
         </Box>
 
         {/* container */}
         <ProjectContainer />
+
+        {Copyright()}
 
     
       </main>
@@ -67,38 +87,3 @@ const Projects = () => {
 }
 
 export default Projects;
-
-{/* <Container sx={{ py: 8 }} maxWidth="md">
-
-<Grid container spacing={4}>
-  {cards.map((card) => (
-    <Grid item key={card} xs={12} sm={6} md={4}>
-      <Card
-        sx={{ height: '100%', display: 'flex', flexDirection: 'column' }}
-      >
-        <CardMedia
-          component="div"
-          sx={{
-            // 16:9
-            pt: '56.25%',
-          }}
-          image="https://source.unsplash.com/random?wallpapers"
-        />
-        <CardContent sx={{ flexGrow: 1 }}>
-          <Typography gutterBottom variant="h5" component="h2">
-            Heading
-          </Typography>
-          <Typography>
-            This is a media card. You can use this section to describe the
-            content.
-          </Typography>
-        </CardContent>
-        <CardActions>
-          <Button size="small">View</Button>
-          <Button size="small">Edit</Button>
-        </CardActions>
-      </Card>
-    </Grid>
-  ))}
-</Grid>
-</Container> */}

@@ -7,11 +7,12 @@ const ContactConteiner = () => {
   console.log(iconLinks);
 
   return (
-    <div className='Header-contact-container'>{
+    <>{  
+      // import ContactConteiner from './ContactConteiner';
       iconLinks.map((a, index) => (
         <ContactCard key={index} iconLink={iconLinks[index]} />
       ))}
-    </div>
+    </>
   )
 }
 

@@ -2,17 +2,19 @@ import React from 'react';
 import { BrowserRouter } from 'react-router-dom/cjs/react-router-dom.min';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import AppRouter from './AppRouter';
+import AppRouter from './AppRouter.jsx';
 import reportWebVitals from './reportWebVitals';
 import { Provider } from 'react-redux';
-import store from './redux'
+import store from './redux';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <BrowserRouter>
   <Provider store={ store } >
+   
     <AppRouter />
+   
   </Provider>
   </BrowserRouter>
 );

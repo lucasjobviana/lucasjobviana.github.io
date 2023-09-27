@@ -3,7 +3,7 @@ import { useSelector } from 'react-redux';
 // import { TransitionGroup, CSSTransition } from 'react-transition-group';
 import { Switch, Route, useLocation } from 'react-router-dom/cjs/react-router-dom.min';
 // import Header from './component/Header';
-import App from './page/App';
+// import App from './page/App';
 import Projects from './page/Projects';
 // import Tools from './page/Tools';
 // import About from './page/About';
@@ -42,25 +42,16 @@ function AppRouter() {
 			<div className='app'>
 				{/* <button onClick={() => { handleClick('prev') }} className='btn-direction prev-page' />
 				<button onClick={() => { handleClick('next') }} className='btn-direction nav next-page' /> */}
+			 
 
 				<Route render={() => (
-
-					// <TransitionGroup>
-					// 	<CSSTransition
-					// 		key={location.key}
-					// 		timeout={400}
-					// 		classNames="fade"
-					// 	>
-							<Switch>
-								<Route exact path="/" component={App} />
-								<Route exact path="/projects" component={Projects} />
-								{/* <Route exact path="/tools" component={Tools} />
-								<Route exact path="/about" component={About} /> */}
-							</Switch>
-					// 	</CSSTransition>
-					// </TransitionGroup>
+					<Switch>
+						<Route exact path="/" component={Projects} />
+						<Route exact path="/projects" component={Projects} />
+					</Switch>
 				)}
 				/>
+				 
 			</div>
 
 		</div>
