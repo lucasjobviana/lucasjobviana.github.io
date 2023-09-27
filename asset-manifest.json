@@ -1,21 +1,19 @@
 {
   "files": {
-    "main.css": "/static/css/main.0d759cde.css",
-    "main.js": "/static/js/main.15175e91.js",
+    "main.css": "/static/css/main.31d6cfe0.css",
+    "main.js": "/static/js/main.678c30ac.js",
     "static/js/787.e4d1ad09.chunk.js": "/static/js/787.e4d1ad09.chunk.js",
     "static/media/kof1.png": "/static/media/kof1.6cfa38c1b4bcffc6c88d.png",
     "static/media/poker1.png": "/static/media/poker1.daf1a678cff95dee3639.png",
     "static/media/task1.png": "/static/media/task1.0fb1d92f72740427233c.png",
     "static/media/blog.png": "/static/media/blog.94a54aad8e150fbf72f2.png",
     "static/media/lucas-job-viana.jpg": "/static/media/lucas-job-viana.2b4103928ccf5c638712.jpg",
-    "static/media/github.png": "/static/media/github.22cfdd1cba253783ce51.png",
     "index.html": "/index.html",
-    "main.0d759cde.css.map": "/static/css/main.0d759cde.css.map",
-    "main.15175e91.js.map": "/static/js/main.15175e91.js.map",
+    "main.678c30ac.js.map": "/static/js/main.678c30ac.js.map",
     "787.e4d1ad09.chunk.js.map": "/static/js/787.e4d1ad09.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.0d759cde.css",
-    "static/js/main.15175e91.js"
+    "static/css/main.31d6cfe0.css",
+    "static/js/main.678c30ac.js"
   ]
 }
